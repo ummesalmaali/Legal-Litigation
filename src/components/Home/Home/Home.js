@@ -1,11 +1,12 @@
 import React from 'react';
 import Contact from '../Contact/Contact';
 import FeaturedService from '../FeaturedService/FeaturedService';
-import Footer from '../Footer/Footer';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../Header/Header';
 import Lawers from '../Lawers/Lawers';
 import Services from '../Services/Services';
 import Testimonials from '../Testimonials/Testimonials';
+import BookAppointment from '../../Appointment/BookAppointment/BookAppointment';
 
 const Home = () => {
     return (

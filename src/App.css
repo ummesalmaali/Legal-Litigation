@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+.btn-brand{
+  background-image: linear-gradient(75deg, #e9ec23,#0fcfec);
+   border-color: transparent;
+   text-transform: uppercase;font-weight: uppercase;
+   color: #1cc7c1;
+}
 .App {
   text-align: center;
 }

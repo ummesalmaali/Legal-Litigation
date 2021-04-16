@@ -10,7 +10,7 @@ const HeaderMain = () => {
               <p>We provide legal advice by thoroughly investigating your matters. You need to draft up legal documents that are necessary for the person or organization. A legal consultant offers any relevant legal advice to their clients and ensures that their clients are in right standing with the law.</p>
              <button className="btn btn-primary">Get Legal Help</button>
             </div>
-            <div className="col-md-6 mt-5">
+            <div className="col-md-6 ">
                 <img src={lawerImg} alt="" className="img-fluid mb-5"/>
             </div>
         </main>
