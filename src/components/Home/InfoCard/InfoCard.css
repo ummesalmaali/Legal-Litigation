@@ -1,0 +1,20 @@
+.info-card{
+    padding:0 5px;
+}
+.info-primary{
+    background-color:  aquamarine;
+}
+.info-dark{
+    background-color: #8e9435;
+}
+.info-icon{
+    font-size: 4em;
+}
+.info-container{
+    height: 250px;
+    padding: 40px;
+}
+.service-img{
+    height: 100px;
+    width: 100px;
+}
