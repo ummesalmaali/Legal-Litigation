@@ -7,6 +7,7 @@ import Login from "./components/Login/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import AllClients from "./components/AllClients/AllClients/AllClients";
 import AddLawer from "./components/AddLawer/AddLawer";
+import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 function App() {
@@ -15,15 +16,13 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route path="/dashboard">
-            <Dashboard></Dashboard>
-          </Route>
-          <Route path="/appointments">
-            <Appointment></Appointment>
-          </Route>
-          <Route path="/allClients">
+         
+          <PrivateRoute path='/dashboard'>
+           <Dashboard></Dashboard>
+          </PrivateRoute>
+          <PrivateRoute path="/allClients">
             <AllClients></AllClients>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -32,7 +31,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <Home></Home>
+           <Appointment></Appointment>
           </Route>
         </Switch>
       </Router>

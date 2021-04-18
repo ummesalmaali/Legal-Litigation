@@ -7,7 +7,7 @@ import serviceImg from '../../../images/Ethics-of-Virtual-Consultations.jpg'
 
 const InfoCard = ({info}) => {
     return (
-        <div style={{height:'200px'}} className='col-md-4 info-card mb-5'>
+        <div style={{height:'200px'}} className='col-md-4 info-card mb-5 '>
             <div className={`d-flex justify-content-center info-container info-${info.background}`}>
             <div className='mr-3'>
                 <FontAwesomeIcon className='info-icon' icon={faGavel}></FontAwesomeIcon>
@@ -17,8 +17,6 @@ const InfoCard = ({info}) => {
            <p>{info.description1}</p>
            <p>{info.description2}</p>
            <p>{info.description3}</p>
-           <p>{info.description4}</p>
-           <p>{info.description5}</p>
             </div>
             </div>
         </div>

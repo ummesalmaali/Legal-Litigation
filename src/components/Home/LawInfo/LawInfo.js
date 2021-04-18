@@ -9,8 +9,7 @@ const infosData = [
         title:'Business Formation',
         description1:'Limited Liability Company(LLC)',
         description2:'Federal Courts & The Public',
-        description3:'Governance & The Judicial Conference',
-        description4:'Workplace Conduct',
+        description3:'The Judicial Conference',
         icon:faGavel,
         background:'primary'
     },
@@ -18,8 +17,8 @@ const infosData = [
         title:'Business Information',
         description1:'Corporate dissolution',
         description2:'Operating agreement',
-        description3:'Governance & The Judicial Conference',
-        description4:'Workplace Conduct',
+        description3:'Workplace Conduct',
+        
         icon:faGavel,
         background:'dark'
     },
@@ -27,8 +26,6 @@ const infosData = [
         title:'Intellectual Property',
         description1:'Trademark registration',
         description2:'Provisional patent',
-        description3:'Governance & The Judicial Conference',
-        description4:'Workplace Conduct',
         icon:faGavel,
         background:'primary'
     },
