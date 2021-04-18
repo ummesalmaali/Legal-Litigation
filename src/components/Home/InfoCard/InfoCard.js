@@ -7,7 +7,7 @@ import serviceImg from '../../../images/Ethics-of-Virtual-Consultations.jpg'
 
 const InfoCard = ({info}) => {
     return (
-        <div className='col-md-4 info-card'>
+        <div style={{height:'200px'}} className='col-md-4 info-card mb-5'>
             <div className={`d-flex justify-content-center info-container info-${info.background}`}>
             <div className='mr-3'>
                 <FontAwesomeIcon className='info-icon' icon={faGavel}></FontAwesomeIcon>

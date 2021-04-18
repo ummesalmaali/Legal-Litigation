@@ -17,8 +17,22 @@ Modal.setAppElement('#root')
 const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date }) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data)
-        closeModal()
+        data.service = appointmentOn;
+        data.date=date;
+        data.created = new Date();
+       fetch("https://stormy-gorge-52541.herokuapp.com/addAppointment",{
+           method:'POST',
+           headers:{'content-type':'application/json'},
+           body: JSON.stringify(data)
+    })
+    .then(res =>res.json())
+    .then(success=>{
+        if(success){
+            closeModal();
+            alert('Appointment created successfully');
+        }
+    })
+        
     };
     return (
         <div>
@@ -33,6 +47,11 @@ const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date }) => {
                  <p className='text-center text-secondary'>On {date.toDateString()}</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
+                        <input type="text" ref={register({ required: true })} name="name" placeholder="Your Name" className="form-control" />
+                        {errors.name && <span className="text-danger">This field is required</span>}
+
+                    </div>
+                <div className="form-group">
                 <input type="text" ref={register({ required: true })} name="phone" placeholder="Phone Number" className="form-control" />
                         {errors.phone && <span className="text-danger">This field is required</span>}
                         </div>
@@ -40,27 +59,7 @@ const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date }) => {
                         <input type="text" ref={register({ required: true })} name="email" placeholder="Email" className="form-control" />
                         {errors.email && <span className="text-danger">This field is required</span>}
                     </div>
-                    <div className="form-group row">
-                        <div className="col-4">
-
-                            <select className="form-control" name="gender" ref={register({ required: true })} >
-                                <option disabled={true} value="Not set">Select Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Not set">Other</option>
-                            </select>
-                            {errors.gender && <span className="text-danger">This field is required</span>}
-
-                        </div>
-                        <div className="col-4">
-                            <input ref={register({ required: true })} className="form-control" name="age" placeholder="Your Age" type="number" />
-                            {errors.age && <span className="text-danger">This field is required</span>}
-                        </div>
-                        <div className="col-4">
-                            <input ref={register({ required: true })} className="form-control" name="weight" placeholder="Weight" type="number" />
-                            {errors.weight && <span className="text-danger">This field is required</span>}
-                        </div>
-                    </div>
+                    
 
                     <div className="form-group text-right">
                         <button type="submit" className="btn btn-brand text-white">Send</button>
