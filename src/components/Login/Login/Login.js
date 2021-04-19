@@ -4,7 +4,7 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config'
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../../App';
-import loginBg from '../../../images/loginL.jpg'
+import loginBg from '../../../images/LawCourt.jpg'
 
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -61,7 +61,7 @@ const Login = () => {
           </div>
         </div>
         <div className="col-md-6 d-none d-md-block align-self-end">
-          <img className="img-fluid" src={loginBg} alt="" />
+          <img style={{height:'700px',width:'900px'}} className="img-fluid mb-5" src={loginBg} alt="" />
         </div>
       </div>
     </div>
