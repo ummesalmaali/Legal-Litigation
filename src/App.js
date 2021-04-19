@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import AllClients from "./components/AllClients/AllClients/AllClients";
 import AddLawer from "./components/AddLawer/AddLawer";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
+import ProcessPayment from "./components/Login/Login/ProcessPayment/ProcessPayment";
 
 export const UserContext = createContext();
 function App() {
@@ -15,8 +16,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        <Switch>
-         
+        <Switch>        
           <PrivateRoute path='/dashboard'>
            <Dashboard></Dashboard>
           </PrivateRoute>
@@ -26,10 +26,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path='/payment'>
+            <ProcessPayment></ProcessPayment>
+          </Route>
           <Route path="/addLawer">
             <AddLawer></AddLawer>
           </Route>
-
           <Route path="/">
            <Appointment></Appointment>
           </Route>
