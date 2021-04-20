@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FeaturedService from '../../Home/FeaturedService/FeaturedService';
 import Header from '../../Home/Header/Header';
 import HeaderMain from '../../Home/HeaderMain/HeaderMain';
 import LawInfo from '../../Home/LawInfo/LawInfo';
@@ -17,6 +18,7 @@ const Appointment = () => {
            <NavBar></NavBar>
            <HeaderMain></HeaderMain>
            <LawInfo></LawInfo>
+           <FeaturedService></FeaturedService>
            <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
            
            <BookAppointment date={selectedDate}></BookAppointment>
