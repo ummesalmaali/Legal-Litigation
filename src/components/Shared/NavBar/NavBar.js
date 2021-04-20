@@ -26,7 +26,7 @@ const NavBar = () => {
         <Link className="nav-link mr-5 " href="#">Contact</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link mr-5" to="/admin">Admin</Link>
+        <Link className="nav-link mr-5" to="/adfLawer">Admin</Link>
       </li>
       <form className="form-inline my-2 my-lg-0">
         <Link to ='/login'><button style={{backgroundColor:'blue',color:'white'}} className="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button></Link>
